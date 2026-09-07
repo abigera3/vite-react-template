@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-avantt), "Inter Tight", sans-serif;
+  --color-ink: #321e37;
+  --color-ink-muted: #706273;
+  --color-cream: #f8f5f0;
+  --color-cream-warm: #f6efea;
+  --color-lilac: #f0ebfb;
+  --color-peach: #f2dac5;
+  --color-border: #d6d2d7;
+  --color-teal: #19d3c5;
+  --color-teal-bright: #50ffeb;
+  --color-teal-mid: #29e6d1;
+  --color-purple: #6935d3;
+  --color-navy: #192852;
+}
+
+html,
+body {
+  background: #f8f5f0;
+  color: #321e37;
+  font-family: var(--font-avantt), "Inter Tight", sans-serif;
+  font-weight: 450;
+  letter-spacing: -0.02em;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-size: 1.125rem;
+  line-height: 1.625rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 550;
+  letter-spacing: -0.03em;
+}
+
+a {
+  color: inherit;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -3rem;
+  z-index: 80;
+  border-radius: 999px;
+  background: #321e37;
+  color: #fff;
+  padding: 0.5rem 1rem;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+.link-underline {
+  box-shadow: inset 0 -2px 0 #321e37;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.link-underline:hover {
+  background: #50ffeb;
+  box-shadow: none;
+}
+
+@keyframes chat-backdrop-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes chat-panel-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.chat-backdrop-in {
+  animation: chat-backdrop-in 0.25s ease-out;
+}
+
+.chat-panel-in {
+  animation: chat-panel-in 0.32s cubic-bezier(0.22, 1, 0.36, 1);
+  transform-origin: bottom right;
+}
